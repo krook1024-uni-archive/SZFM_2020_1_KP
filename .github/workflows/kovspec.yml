@@ -16,6 +16,6 @@ jobs:
           args: --output=output/main.pdf ${{ env.FILELIST }}
       - uses: actions/upload-artifact@master
         with:
-          name: output
-          path: output
+          name: kovpsec.pdf
+          path: output/main.pdf
 
