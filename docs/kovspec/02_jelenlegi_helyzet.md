@@ -1,0 +1,3 @@
+# Jelenlegi helyzet
+
+`TODO`

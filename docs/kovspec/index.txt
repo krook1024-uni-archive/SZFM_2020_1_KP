@@ -1,1 +1,6 @@
-01_info.md
+00_meta.md
+01_bevezetes.md
+02_jelenlegi_helyzet.md
+03_vagyalom_rendszer.md
+04_jelenlegi_uzleti_folyamatok.md
+05_igenyelt_uzleti_folyamatok.md
