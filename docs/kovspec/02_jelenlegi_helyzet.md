@@ -9,7 +9,7 @@ hogy ezek az appok nagyrészt nehezen kezelhető bonyolult felülettel rendelkez
 több nem kívánatos funkciót is tartalmazhatnak.
 
 Emiatt nem keltenek olyan érzést, mintha csak egy cetlire írt bevásárlólistát
-használnánk elektronikus formában, és a az emberek inkább visszatérnek a régi
+használnánk elektronikus formában, és az emberek inkább visszatérnek a régi
 módszerek használatához.
 
 A cégünket egy olyan teendő kezelő alkalmazás létrehozására kérték fel, amely
