@@ -1,2 +1,7 @@
 *.pdf
 *.log
+
+### macOS ###
+.DS_Store
+.AppleDouble
+.LSOverride
