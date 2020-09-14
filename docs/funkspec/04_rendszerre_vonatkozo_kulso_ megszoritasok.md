@@ -1,4 +1,9 @@
 # A rendszerre vonatkozó külső megszorítások
 
-- Az alkalmazás forráskódja ideálisan 40-800 sor
+Kis Projekt formai meszorításai:
+- Az alkalmazás forráskódja 400-800 körüli sor
+- Verziókövetés git segítségével
+- Feladat követés valamilyen feladatkövetővel (github, trello)
 - 
+
+Programozási konvenciók szemelőtt tartása és betartása.
