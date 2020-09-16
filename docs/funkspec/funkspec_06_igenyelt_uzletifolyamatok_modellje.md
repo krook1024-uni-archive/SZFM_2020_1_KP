@@ -1,5 +1,7 @@
 # Igényelt üzletifolyamatok modellje
 
+- Ingyenes applikáció
+- Széleskörben elérhető mindenki számára
 - Cross platform applikáció: Android <-> PC
 - webalapú alkalmazás
 - HTML, PHP, Node.js-beli megvalósítás
