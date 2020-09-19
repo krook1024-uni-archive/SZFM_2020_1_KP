@@ -12,8 +12,8 @@ jól látható, használható lesz az alkalmazás.
 A lista elemek leírása előtt elérhető lesz egy checkbox, amivel a már elvégzett
 elemeket kipipálhatjuk, ekkor a rendszer áthúzza a listaelem szövegét, illetve a
 listaelemet tartalmazó konténer átszineződik, hogy kevésbé látható legyen. 
-A listaelemekhez lehetőség lesz időpontot beállítani, ami jelzi a végrehajtás 
-határidejét. A listában a legkorábbi határidővel rendelkező elemek lesznek felül.  
+A listaelemekhez lehetőség lesz időpontot beállítani, a listában a legkorábbi 
+határidővel rendelkező elemek lesznek felül.  
 
 ### Több szeparált lista
 
