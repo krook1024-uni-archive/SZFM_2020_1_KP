@@ -3,7 +3,7 @@ name: Create kövspec PDF
 on: push
 
 jobs:
-    - convert_via_pandoc:
+     convert_via_pandoc:
         runs-on: ubuntu-18.04
         steps:
           - uses: actions/checkout@v2
