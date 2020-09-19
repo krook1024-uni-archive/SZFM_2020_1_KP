@@ -1,4 +1,4 @@
-name: Create kövspec PDF
+name: Create funkspec PDF
 
 on: push
 
