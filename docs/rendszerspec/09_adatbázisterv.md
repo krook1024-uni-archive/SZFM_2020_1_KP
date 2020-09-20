@@ -1,7 +1,7 @@
 # Adatbázisterv 
 
 A projekthez nem tervezünk külső adatbázist használni, az adatokat a
-böngésző localstorage-ában fogjuk tárolni. Ezzel a megoldással
+böngésző **localstorage**-ában fogjuk tárolni. Ezzel a megoldással
 10 MB-ig tárolhatunk adatokat, amelyek még akkor is fennmaradnak,
 ha a böngőszőt már bezárjuk, illetve nincsen lejárati idejük sem.
 Előnyük, akár a session-ökkel szemben hogy duplaannyi adatot tárolhatunk
