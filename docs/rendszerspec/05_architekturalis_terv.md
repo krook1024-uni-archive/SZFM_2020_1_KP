@@ -2,15 +2,16 @@
 
 ## Tervezési minta
 
-MVC - (model-view-controller) tervezési minta alkalmazása
+MVC - (model-view-controller) tervezési minta alkalmazása, kialakítása.
 
 ## Alkalmazás rétegei, komponensei
 
-
+Még kidolgozás alatt állnak.
 
 ## Változások kezelése
 
-A programozási konvencióknak megfelelően. 
+A programozási konvencióknak megfelelően. Könnyen és egymástól függetlenül
+változtathatók a programunk egyes részei, komponensei az igénynek megfelelően.
 
 ## Bővíthetőség
 
