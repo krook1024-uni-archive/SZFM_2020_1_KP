@@ -40,12 +40,7 @@ export const completeTodoInList = (listId, todoId) => {
   if (typeof todoLists[listId] !== "undefined" && todoLists[listId] !== null) {
     if (typeof todoLists[listId].todos !== "undefined") {
       console.log(`béka`);
-      todoLists[listId].todos = todoLists[listId].todos.filter(
-        (todoitem, index) => {
-          console.log(`${index} - ${todoitem}`);
-          return index !== todoId;
-        }
-      );
+      todoLists[listId].todos[todoId].completed = true;
     }
   }
   saveToLocalStorage(todoLists);
