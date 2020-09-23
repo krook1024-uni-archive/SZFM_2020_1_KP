@@ -3,19 +3,17 @@ import React from "react";
 import Header from "./components/Header";
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
-import { getTodoLists, addTodoList } from "./util/todos";
+import { TodoProvider } from "./context/todo-context";
 
 function App() {
-  let todos = getTodoLists();
   return (
-    <>
+    <TodoProvider>
       <Header />
       <div className='TodosApp'>
-        Lorem ipsum dolor sit amet...
-        <TodoForm addTodoList={addTodoList} />
-        <TodoList todos={todos} />
+        <TodoForm />
+        <TodoList />
       </div>
-    </>
+    </TodoProvider>
   );
 }
 
