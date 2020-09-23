@@ -26,6 +26,19 @@ body {
   border-radius: 0.5rem;
   padding: 1em;
 }
+.inputField {
+  background-color: #ffeb8f;
+  margin: 1em;
+  height: 3em;
+}
+.addButton {
+  background-color: #ff414e;
+  padding: 0.7em;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+  font-weight: bold;
+}
 
 @media screen and (max-width: 768px) {
   .TodosApp {
