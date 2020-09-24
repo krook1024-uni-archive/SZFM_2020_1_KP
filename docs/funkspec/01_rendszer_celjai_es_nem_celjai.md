@@ -1,3 +1,5 @@
+# Rendszer céljai és nem céljai
+
 A rendszer legfőbb célja, az átláthatóság és a kompatibilitás. Az alkalmazás
 "Simplistic" design-ban készül el, számítógépre és telefonra egyaránt.
 
