@@ -1,3 +1,5 @@
+# Jelenlegi helyzet leírása
+
 Jelenlegi rendszerünk egy letisztult "simplistic" kinézettel illetve stílussal
 bír amit megpróbálunk folyamatosan javítani. A kinézeten folyamatosan újítunk,
 hogy minél letisztultabb és a szemnek kényelmes legyen.
