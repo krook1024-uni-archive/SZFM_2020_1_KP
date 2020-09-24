@@ -1,11 +1,17 @@
 .inputField {
   background-color: #ffeb8f;
-  margin: 1em;
-  height: 3em;
+  margin: 1rem;
+  margin-right: 0rem;
+  height: 3rem;
+  width: 32rem;
+  font-size: 1.5em;
 }
 .addButton {
   background-color: #ff414e;
-  padding: 0.7em;
+  font-size: 1.5em;
+  padding: 0.7rem;
+  height: 3rem;
+  width: 6rem;
   text-align: center;
   font-family: "Courier New", Courier, monospace;
   color: white;
