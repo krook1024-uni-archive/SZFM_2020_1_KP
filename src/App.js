@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <Header />
-      <TodoAdd.js />
+      <TodoAdd />
       <div className="TodosApp">
         Lorem ipsum dolor sit amet...
         <TodoForm addTodoList={addTodoList} />
