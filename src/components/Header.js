@@ -56,7 +56,9 @@ const Header = () => {
           </>
         </Dropdown.Menu>
       </Dropdown>
-      <h1 id="selected-list">{current >= 0 ? lists[current].name: 'No TodoLists added yet.'}</h1>
+      <h1 id="selected-list">
+        {typeof(current) === 'undefined' ? lists[current].name : "No TodoLists added yet."}
+      </h1>
     </div>
   );
 };
