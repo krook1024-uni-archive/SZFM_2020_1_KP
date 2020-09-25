@@ -1,8 +1,11 @@
 import React, { useRef } from "react";
 import "../styles/TodoAdd.css";
+import { useTodoState, useTodoDispatch } from "../context/todo-context";
 
 export default function TodoAdd() {
   const todoNameRef = useRef();
+  const { current } = useTodoState();
+  const dispatch = useTodoDispatch();
 
   function handleAdding(e) {
     var name = todoNameRef.current.value;
@@ -15,7 +18,16 @@ export default function TodoAdd() {
       console.log("sok");
       return;
     }
-    console.log(name);
+    dispatch({
+      type: "add_item",
+      payload: {
+        listId: current,
+        item: {
+          name,
+          completed: false,
+        },
+      },
+    });
     todoNameRef.current.value = null;
   }
   return (
