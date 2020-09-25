@@ -47,7 +47,7 @@ const todoReducer = (state, action) => {
 const TodoProvider = ({ children }) => {
   const [state, dispatch] = usePersistedReducer(todoReducer, {
     lists: [],
-    current: 0,
+    current: -1,
   });
   return (
     <TodoStateContext.Provider value={state}>

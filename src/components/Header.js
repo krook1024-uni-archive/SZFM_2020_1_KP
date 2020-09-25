@@ -26,6 +26,7 @@ const Header = () => {
       if (lists[i].name === name) {
         index = i;
         dispatch({ type: "set_current", payload: index });
+        console.log(current)
       }
     }
   }
@@ -57,7 +58,7 @@ const Header = () => {
         </Dropdown.Menu>
       </Dropdown>
       <h1 id="selected-list">
-        {typeof(current) === 'undefined' ? lists[current].name : "No TodoLists added yet."}
+        {current <0 ? 'No todos yet.' : lists[current].name}
       </h1>
     </div>
   );
