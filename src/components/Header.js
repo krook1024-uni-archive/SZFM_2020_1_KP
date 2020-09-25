@@ -20,15 +20,9 @@ const Header = () => {
     }
   }
 
-  function selectCurrent(name) {
-    let index = null;
-    for (let i = 0; i < lists.length; i++) {
-      if (lists[i].name === name) {
-        index = i;
-        dispatch({ type: "set_current", payload: index });
-        console.log(current)
-      }
-    }
+  function selectCurrent(index) {
+    dispatch({ type: "set_current", payload: index });
+    console.log(current);
   }
 
   return (
@@ -42,7 +36,7 @@ const Header = () => {
             return (
               <Dropdown.Item
                 className="menu-item"
-                onClick={() => selectCurrent(value.name)}
+                onClick={() => selectCurrent(index)}
                 key={index}
               >
                 {value.name}
@@ -58,7 +52,7 @@ const Header = () => {
         </Dropdown.Menu>
       </Dropdown>
       <h1 id="selected-list">
-        {current <0 ? 'No todos yet.' : lists[current].name}
+        {current < 0 ? "No todos yet." : lists[current].name}
       </h1>
     </div>
   );
