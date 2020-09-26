@@ -16,7 +16,8 @@ function App() {
         Lorem ipsum dolor sit amet...
         <TodoForm addTodoList={addTodoList} />
         <TodoList todos={todos} />
-      <div className='TodosApp'>
+      </div>
+      <div className="TodosApp">
         <TodoForm />
         <TodoList />
       </div>
