@@ -4,6 +4,7 @@ import { useTodoState, useTodoDispatch } from "../context/todo-context";
 import FormControl from "react-bootstrap/FormControl";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import InputGroup from "react-bootstrap/InputGroup";
 
 export default function TodoAdd() {
   const todoNameRef = useRef();
@@ -12,6 +13,9 @@ export default function TodoAdd() {
 
   function handleAdding(e) {
     var name = todoNameRef.current.value;
+    if ((todoNameRef.current = -1)) {
+      return;
+    }
     if (name === "") return;
     if (name.length < 3) {
       console.log("kevés");
@@ -21,6 +25,8 @@ export default function TodoAdd() {
       console.log("sok");
       return;
     }
+    console.log(name);
+
     dispatch({
       type: "add_item",
       payload: {
@@ -33,19 +39,38 @@ export default function TodoAdd() {
     });
     todoNameRef.current.value = null;
   }
+
   return (
-    <view style={{ flex: 1, flexDirection: "row", alignItems: "flex-start" }}>
-      <Form className="formMain" ref={todoNameRef}>
-        <Form.Group controlId="formTodo">
-          <Form.Control type="text" placeholder="ToDo Name" />
-          <Button onClick={handleAdding} className="addButton">
+    <view className="container">
+      <InputGroup
+        className="inputgroup"
+        style={{ flex: 1, flexDirection: "row" }}
+      >
+        <FormControl
+          ref={todoNameRef}
+          className="formControll"
+          placeholder="What to do?"
+          type="text"
+          color="#ffeb8f"
+          aria-label="ToDo name"
+          aria-describedby="basic-addon"
+          style={{}}
+        ></FormControl>
+
+        <InputGroup.Append>
+          <Button
+            variant="danger"
+            onClick={handleAdding}
+            className="formButton"
+            style={{}}
+          >
             Add
           </Button>
-        </Form.Group>
-        <Form.Group>
-          <Form.Text className="formHint">3-128 karakter</Form.Text>
-        </Form.Group>
-      </Form>
+        </InputGroup.Append>
+      </InputGroup>
+      <Form.Text className="formHint">
+        Minimum 3 karakter, maximum 128 karakter
+      </Form.Text>
     </view>
   );
 }
