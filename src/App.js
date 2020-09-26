@@ -5,19 +5,22 @@ import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
 import TodoAdd from "./components/TodoAdd";
 import { getTodoLists, addTodoList } from "./util/todos";
+import { TodoProvider } from "./context/todo-context";
 
 function App() {
-  let todos = getTodoLists();
   return (
-    <>
+    <TodoProvider>
       <Header />
       <TodoAdd />
       <div className="TodosApp">
         Lorem ipsum dolor sit amet...
         <TodoForm addTodoList={addTodoList} />
         <TodoList todos={todos} />
+      <div className='TodosApp'>
+        <TodoForm />
+        <TodoList />
       </div>
-    </>
+    </TodoProvider>
   );
 }
 
