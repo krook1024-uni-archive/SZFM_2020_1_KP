@@ -1,10 +1,6 @@
 import React, { useRef } from "react";
 import "../styles/TodoAdd.css";
 import { useTodoState, useTodoDispatch } from "../context/todo-context";
-import FormControl from "react-bootstrap/FormControl";
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import InputGroup from "react-bootstrap/InputGroup";
 
 export default function TodoAdd() {
   const todoNameRef = useRef();
@@ -13,9 +9,6 @@ export default function TodoAdd() {
 
   function handleAdding(e) {
     var name = todoNameRef.current.value;
-    if ((todoNameRef.current = -1)) {
-      return;
-    }
     if (name === "") return;
     if (name.length < 3) {
       console.log("kevés");
@@ -25,8 +18,6 @@ export default function TodoAdd() {
       console.log("sok");
       return;
     }
-    console.log(name);
-
     dispatch({
       type: "add_item",
       payload: {
@@ -37,40 +28,19 @@ export default function TodoAdd() {
         },
       },
     });
+    console.log(name);
     todoNameRef.current.value = null;
+  }
+  if (current === 1) {
+    return null;
   }
 
   return (
-    <view className="container">
-      <InputGroup
-        className="inputgroup"
-        style={{ flex: 1, flexDirection: "row" }}
-      >
-        <FormControl
-          ref={todoNameRef}
-          className="formControll"
-          placeholder="What to do?"
-          type="text"
-          color="#ffeb8f"
-          aria-label="ToDo name"
-          aria-describedby="basic-addon"
-          style={{}}
-        ></FormControl>
-
-        <InputGroup.Append>
-          <Button
-            variant="danger"
-            onClick={handleAdding}
-            className="formButton"
-            style={{}}
-          >
-            Add
-          </Button>
-        </InputGroup.Append>
-      </InputGroup>
-      <Form.Text className="formHint">
-        Minimum 3 karakter, maximum 128 karakter
-      </Form.Text>
-    </view>
+    <form className="form">
+      <input id="formInput" type="text" placeholder="What to do"></input>
+      <button id="formButton" onClick={handleAdding}>
+        Add
+      </button>
+    </form>
   );
 }
