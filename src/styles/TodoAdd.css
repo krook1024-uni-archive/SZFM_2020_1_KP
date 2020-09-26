@@ -1,19 +1,19 @@
-.inputField {
-  background-color: #ffeb8f;
-  margin: 1rem;
-  margin-right: 0rem;
-  height: 3rem;
-  width: 32rem;
-  font-size: 1.5em;
+.container {
+  width: 75%;
+  align-items: center;
+  margin: 1em;
 }
-.addButton {
-  background-color: #ff414e;
-  font-size: 1.5em;
-  padding: 0.7rem;
-  height: 3rem;
-  width: 6rem;
-  text-align: center;
-  font-family: "Courier New", Courier, monospace;
-  color: white;
+.formButton {
+  text-transform: uppercase;
   font-weight: bold;
+}
+.formControll {
+  background-color: #ffeb8f;
+  color: #ffeb8f;
+}
+.formHint {
+  color: black;
+}
+#root {
+  background-color: #ffde22;
 }
