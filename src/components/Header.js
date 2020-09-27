@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import "../styles/Header.css";
 import Dropdown from "react-bootstrap/Dropdown";
 import { useTodoState, useTodoDispatch } from "../context/todo-context";
+import menuIcon from "../styles/icons/menu-icon.svg"
 
 const Header = () => {
   let addRef = useRef();
@@ -28,8 +29,8 @@ const Header = () => {
   return (
     <div className="header-container">
       <Dropdown className="dropdown">
-        <Dropdown.Toggle variant="success" id="dropdown-basic">
-          Todos
+        <Dropdown.Toggle className='menu-button' variant="success" id="dropdown-basic">
+          <img src={menuIcon} alt='default'></img>
         </Dropdown.Toggle>
         <Dropdown.Menu align="left" className="dropdown-menu">
           {lists.map((value, index) => {
@@ -43,12 +44,12 @@ const Header = () => {
               </Dropdown.Item>
             );
           })}
-          <>
+          <div className='add-list-container'>
             <input className="inputField" ref={addRef} type="text" />
             <button className="addButton" onClick={addHandler}>
               Add
             </button>
-          </>
+          </div>
         </Dropdown.Menu>
       </Dropdown>
       <h1 id="selected-list">
