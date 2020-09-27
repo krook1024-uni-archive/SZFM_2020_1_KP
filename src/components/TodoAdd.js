@@ -31,7 +31,7 @@ export default function TodoAdd() {
     console.log(name);
     todoNameRef.current.value = null;
   }
-  if (current === 0) {
+  if (current === -1) {
     return null;
   }
 
