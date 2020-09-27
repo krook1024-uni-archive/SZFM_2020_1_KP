@@ -31,13 +31,18 @@ export default function TodoAdd() {
     console.log(name);
     todoNameRef.current.value = null;
   }
-  if (current === -1) {
+  if (current === 0) {
     return null;
   }
 
   return (
     <form className="form">
-      <input id="formInput" type="text" placeholder="What to do"></input>
+      <input
+        ref={todoNameRef}
+        id="formInput"
+        type="text"
+        placeholder="What to do"
+      ></input>
       <button id="formButton" onClick={handleAdding}>
         Add
       </button>
