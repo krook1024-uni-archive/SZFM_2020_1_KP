@@ -7,7 +7,7 @@ export default function TodoAdd() {
   const { current } = useTodoState();
   const dispatch = useTodoDispatch();
 
-  function handleAdding(e) {
+  const handleAdding = (e) => {
     var name = todoNameRef.current.value;
     if (name === "" || name === null || name === undefined) return;
     if (name.length < 3) {
@@ -28,9 +28,10 @@ export default function TodoAdd() {
         },
       },
     });
+    e.preventDefault();
     console.log(name);
     todoNameRef.current.value = null;
-  }
+  };
   if (current === -1) {
     return null;
   }
@@ -43,7 +44,7 @@ export default function TodoAdd() {
         type="text"
         placeholder="What to do"
       ></input>
-      <button id="formButton" onClick={handleAdding}>
+      <button id="formButton" onClick={(e) => addHandler(e)}>
         Add
       </button>
     </form>
