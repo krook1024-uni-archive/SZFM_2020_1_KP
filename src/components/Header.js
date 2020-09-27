@@ -9,7 +9,7 @@ const Header = () => {
   const dispatch = useTodoDispatch();
   const { lists, current } = useTodoState();
 
-  function addHandler() {
+  const addHandler = (e) => {
     let name = addRef.current.value;
 
     if (name !== "") {
@@ -19,6 +19,7 @@ const Header = () => {
       };
       dispatch({ type: "add_list", payload: newTodoList });
     }
+    e.preventDefault()
   }
 
   function selectCurrent(index) {
@@ -46,7 +47,7 @@ const Header = () => {
           })}
           <div className='add-list-container'>
             <input className="inputField" ref={addRef} type="text" />
-            <button className="addButton" onClick={addHandler}>
+            <button className="addButton" onClick={(e) => addHandler(e)}>
               Add
             </button>
           </div>

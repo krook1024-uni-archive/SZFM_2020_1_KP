@@ -22,6 +22,16 @@ const todoReducer = (state, action) => {
         lists,
       };
     }
+    case "delete_item": {
+      let lists = state.lists;
+      let list = lists[action.payload.listId]
+      const newList = list.todos.filter((item,index) => index !== action.payload.itemId)
+      list.todos = newList
+      return{
+        ...state,
+        lists,
+      };
+    }
     case "complete_item": {
       let lists = state.lists;
       let list = lists[action.payload.listId];
