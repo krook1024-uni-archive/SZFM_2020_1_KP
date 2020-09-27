@@ -10,4 +10,5 @@ geometry:
 - right=20mm
 - bottom=20mm
 papersize: A4
+toc: true
 ---

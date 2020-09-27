@@ -8,7 +8,7 @@ A kettő alkalmazása egyszerre => Nincs kapcsolat a listák között
 
 - Kézzel írva => Csúnya kézírás miatt adatvesztés.
 - Papíron => Sérülékenység => Adatvesztés
-- 
+
 ### Egyéb alkalmazás
 
 - Külön alkalmazás mobil telefonon és pc-n => Nincs cross-platform lehetőség
