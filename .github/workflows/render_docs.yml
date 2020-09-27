@@ -10,8 +10,9 @@ jobs:
   docs:
     runs-on: ubuntu-18.04
     steps:
-      - name: first step
+      - name: checkout
         uses: actions/checkout@v2
+      - name: first step
         run: |
           mkdir output
           echo "::set-env name=FILELIST::$(printf '"%s" ' docs/funkspec/*.md)"
@@ -20,7 +21,6 @@ jobs:
         with:
           args: --pdf-engine=xelatex --output=output/funkspec.pdf ${{ env.FILELIST }}
       - name: third step
-        uses: actions/checkout@v2
         run: |
           echo "::set-env name=FILELIST::$(printf '"%s" ' docs/kovspec/*.md)"
       - name: fourth step
@@ -28,7 +28,6 @@ jobs:
         with:
           args: --pdf-engine=xelatex --output=output/kovspec.pdf ${{ env.FILELIST }}
       - name: fifth step
-        uses: actions/checkout@v2
         run: |
           echo "::set-env name=FILELIST::$(printf '"%s" ' docs/rendszerspec/*.md)"
       - name: sixth step
