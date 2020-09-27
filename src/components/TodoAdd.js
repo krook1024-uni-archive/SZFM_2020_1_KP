@@ -9,7 +9,7 @@ export default function TodoAdd() {
 
   function handleAdding(e) {
     var name = todoNameRef.current.value;
-    if (name === "") return;
+    if (name === "" || name === null || name === undefined) return;
     if (name.length < 3) {
       console.log("kevés");
       return;
