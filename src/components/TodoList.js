@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useTodoState, useTodoDispatch } from "../context/todo-context";
 import { FormCheck } from "react-bootstrap";
-import "../styles/TodoList.css"
+import "../styles/TodoList.css";
 
 const TodoList = () => {
   const { lists, current } = useTodoState();
