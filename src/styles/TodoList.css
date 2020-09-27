@@ -1,0 +1,16 @@
+button{
+background-color: transparent;
+text-decoration: none;
+border: none;
+color: '#fff';
+margin-left: 1rem;
+}
+
+.form-check-input
+{
+margin-right: 1rem;
+}
+
+.todo-item{
+font-size: 23px;
+}
