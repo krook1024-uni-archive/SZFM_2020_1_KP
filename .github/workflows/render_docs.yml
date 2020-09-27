@@ -1,0 +1,42 @@
+name: Render kövspec, funkspec, rendszerspec
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  docs:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: first step
+        uses: actions/checkout@v2
+        run: |
+          mkdir output
+          echo "::set-env name=FILELIST::$(printf '"%s" ' docs/funkspec/*.md)"
+      - name: second step
+        uses: docker://pandoc/latex:2.10
+        with:
+          args: --pdf-engine=xelatex --output=output/funkspec.pdf ${{ env.FILELIST }}
+      - name: third step
+        uses: actions/checkout@v2
+        run: |
+          echo "::set-env name=FILELIST::$(printf '"%s" ' docs/kovspec/*.md)"
+      - name: fourth step
+        uses: docker://pandoc/latex:2.10
+        with:
+          args: --pdf-engine=xelatex --output=output/kovspec.pdf ${{ env.FILELIST }}
+      - name: fifth step
+        uses: actions/checkout@v2
+        run: |
+          echo "::set-env name=FILELIST::$(printf '"%s" ' docs/rendszerspec/*.md)"
+      - name: sixth step
+        uses: docker://pandoc/latex:2.10
+        with:
+          args: --pdf-engine=xelatex --output=output/rendszerspec.pdf ${{ env.FILELIST }}
+      - name: seventh step
+        uses: actions/upload-artifact@v2
+        with:
+          name: docs
+          path: output
