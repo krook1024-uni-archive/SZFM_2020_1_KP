@@ -84,3 +84,19 @@ anomáliákat.
 **Elvárt viselkedés:**
 
 **Tényleges viselkedés:**
+
+## Todo lista kiválasztásának tesztelése a memóriában
+
+**Elvárt viselkedés:** A böngésző localstorage-ában a current lista értéke 
+átvált a kiválasztott lista indexére. 
+
+**Tényleges viselkedés:** A listák rendelkeznek egy key attribútummal, ami a sorrendjüket írja le. Ez az attribútum kerül megadásra egy függvénynek onClick eventnél majd adódik át a dispatch függvénynek, ami átírja a current lista értékét. 
+
+## Todo lista hozzáadásának tesztelése a memóriában 
+
+**Elvárt viselkedés:** A lista bekerül a listák tömbjébe a böngésző localstorage-ában. 
+
+**Tényleges viselkedés:** A lista bekerül a listák tömbjébe. Az add gomb megnyomásakor ha lista nevét tartalmazó form nem üres a hozzáadást kezelő függvény létrehoz egy új lista objektumot amit paraméterként átad a dispatch függvénynek, ami hozzáfűzi a már meglévő listákhoz. 
+
+
+
