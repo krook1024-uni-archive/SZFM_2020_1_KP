@@ -2,6 +2,8 @@ import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import TodoAdd from "./components/TodoAdd";
 
+function render(ui) {}
+
 require("./components/TodoAdd");
 
 test("Nem megfelelő string", () => {
