@@ -15,4 +15,7 @@ test("Correct placement of TodoAdd ", () => {
   const { container } = render(<TodoAdd />);
   expect(container.parentNode).toHaveClass("App");
 });
-test("Correct place ", () => {});
+test("Have no child ", () => {
+  const { container } = render(<TodoAdd />);
+  expect(container.firstChild).toBe(null);
+});
