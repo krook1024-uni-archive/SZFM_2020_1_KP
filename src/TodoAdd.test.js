@@ -8,6 +8,8 @@ import { shallow } from "enzyme";
 import TodoAdd from "./components/TodoAdd";
 import { Button } from "react-bootstrap";
 
+const mockFn = jest.fn();
+
 test("Correct placement of TodoAdd ", () => {
   const { container } = render(<TodoAdd />);
   expect(container.parentNode).toHaveClass("App");
@@ -34,5 +36,10 @@ describe("TodoAdd", () => {
     const tree = shallow(<TodoAdd name="buttonTest" />);
     expect(typeof tree.find(".button").node.props.value).toBe("string");
     expect(tree.find(".button").node.props.value).toEqual("buttonTest");
+  });
+  it("should call mock function when button clicked", () => {
+    const tree = shallow(<TodoAdd name="buttonTest" handleClick={mockFn} />);
+    tree.simulate("click");
+    expect(mockFn).toHaveBeenCalled();
   });
 });
