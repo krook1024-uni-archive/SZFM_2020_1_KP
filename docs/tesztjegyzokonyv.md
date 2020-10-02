@@ -110,6 +110,9 @@ ami átírja a current lista értékét.
  form nem üres a hozzáadást kezelő függvény létrehoz egy új lista objektumot amit paraméterként átad a dispatch
 függvénynek, ami hozzáfűzi a már meglévő listákhoz. 
 
+
+### A Funkció manuális tesztelésének eredményei
+
 | hozzáadott lista neve |  listák tömbje hozzáadás előtt  |                      listák várt tömbje                      |                         listák tömbje                        |
 |:---------------------:|:-------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------------:|
 |  nincs (alaphelyzet)  |                []               |                              []                              |                              []                              |
@@ -121,9 +124,15 @@ függvénynek, ami hozzáfűzi a már meglévő listákhoz.
 **Elvárt viselkedés:** A header közepén a legutoljára kiválasztott lista neve jelenik meg, ha nincs kiválasztva lista a "No Todos yet." szöveg jelenjen meg.
 
 **Tényleges vislkedés:**
-A header cím értéke egy feltételes utasítással kerül megadásra ha a current változó
-értéke kezdőérték akkor a "No Todos yet" szöveg jelenik meg, másképp a jelenlegi lista neve. 
+A header cím értéke egy feltételes utasítással kerül megadásra, ha a current változó
+értéke kezdőérték, akkor a "No Todos yet" szöveg jelenik meg, egyébként a jelenlegi lista neve. 
 
+### A Funkció manuális tesztelésének eredményei
 
-
+| kiválaszott lista neve | header várt címe |  header címe  |
+|:----------------------:|:----------------:|:-------------:|
+|   nincs (alaphelyzet)  |  Not Todos yet.  | No Todos yet. |
+|          todo0         |       todo0      |     todo0     |
+|         todos1         |      todos1      |     todos1    |
+|         todos3         |      todos3      |     todos3    |
 
