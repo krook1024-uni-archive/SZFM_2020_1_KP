@@ -84,3 +84,55 @@ anomáliákat.
 **Elvárt viselkedés:**
 
 **Tényleges viselkedés:**
+
+## Todo lista kiválasztásának tesztelése a memóriában
+
+**Elvárt viselkedés:** A böngésző localstorage-ában a current lista értéke 
+átvált a kiválasztott lista indexére. 
+
+**Tényleges viselkedés:** A listák rendelkeznek egy key attribútummal, ami a sorrendjüket írja le. 
+Ez az attribútum kerül megadásra egy függvénynek onClick eventnél majd adódik át a dispatch függvénynek,
+ami átírja a current lista értékét. 
+
+### A Funkció manuális tesztelésének eredményei
+
+| rákattintott lista  | current változó várt értéke | current változó értéke |
+|:-------------------:|:---------------------------:|:----------------------:|
+| nincs (alaphelyzet) |              -1             |           -1           |
+|          1.         |              0              |            0           |
+|          4.         |              3              |            3           |
+
+## Todo lista hozzáadásának tesztelése a memóriában 
+
+**Elvárt viselkedés:** A lista bekerül a listák tömbjébe a böngésző localstorage-ában. 
+
+**Tényleges viselkedés:** A lista bekerül a listák tömbjébe. Az add gomb megnyomásakor ha lista nevét tartalmazó
+ form nem üres a hozzáadást kezelő függvény létrehoz egy új lista objektumot amit paraméterként átad a dispatch
+függvénynek, ami hozzáfűzi a már meglévő listákhoz. 
+
+
+### A Funkció manuális tesztelésének eredményei
+
+| hozzáadott lista neve |  listák tömbje hozzáadás előtt  |                      listák várt tömbje                      |                         listák tömbje                        |
+|:---------------------:|:-------------------------------:|:------------------------------------------------------------:|:------------------------------------------------------------:|
+|  nincs (alaphelyzet)  |                []               |                              []                              |                              []                              |
+|         todos1        |                []               |                [[{name: "todos1", todos: []}]]               |                [[{name: "todos1", todos: []}]]               |
+|           4.          | [[{name: "todos1", todos: []}]] | [[{name: "todos1", todos: []}, {name: "todos2", todos: []}]] | [[{name: "todos1", todos: []}, {name: "todos2", todos: []}]] |
+
+## A címként a kiválasztott lista jelenik meg
+
+**Elvárt viselkedés:** A header közepén a legutoljára kiválasztott lista neve jelenik meg, ha nincs kiválasztva lista a "No Todos yet." szöveg jelenjen meg.
+
+**Tényleges vislkedés:**
+A header cím értéke egy feltételes utasítással kerül megadásra, ha a current változó
+értéke kezdőérték, akkor a "No Todos yet" szöveg jelenik meg, egyébként a jelenlegi lista neve. 
+
+### A Funkció manuális tesztelésének eredményei
+
+| kiválaszott lista neve | header várt címe |  header címe  |
+|:----------------------:|:----------------:|:-------------:|
+|   nincs (alaphelyzet)  |  Not Todos yet.  | No Todos yet. |
+|          todo0         |       todo0      |     todo0     |
+|         todos1         |      todos1      |     todos1    |
+|         todos3         |      todos3      |     todos3    |
+
