@@ -87,12 +87,12 @@ anomáliákat.
 
 ## Todo lista kiválasztásának tesztelése a memóriában
 
-**Elvárt viselkedés:** A böngésző localstorage-ában a current lista értéke 
-átvált a kiválasztott lista indexére. 
+**Elvárt viselkedés:** A böngésző localstorage-ában a current lista értéke
+átvált a kiválasztott lista indexére.
 
-**Tényleges viselkedés:** A listák rendelkeznek egy key attribútummal, ami a sorrendjüket írja le. 
+**Tényleges viselkedés:** A listák rendelkeznek egy key attribútummal, ami a sorrendjüket írja le.
 Ez az attribútum kerül megadásra egy függvénynek onClick eventnél majd adódik át a dispatch függvénynek,
-ami átírja a current lista értékét. 
+ami átírja a current lista értékét.
 
 ### A Funkció manuális tesztelésének eredményei
 
@@ -102,13 +102,13 @@ ami átírja a current lista értékét.
 |          1.         |              0              |            0           |
 |          4.         |              3              |            3           |
 
-## Todo lista hozzáadásának tesztelése a memóriában 
+## Todo lista hozzáadásának tesztelése a memóriában
 
-**Elvárt viselkedés:** A lista bekerül a listák tömbjébe a böngésző localstorage-ában. 
+**Elvárt viselkedés:** A lista bekerül a listák tömbjébe a böngésző localstorage-ában.
 
 **Tényleges viselkedés:** A lista bekerül a listák tömbjébe. Az add gomb megnyomásakor ha lista nevét tartalmazó
  form nem üres a hozzáadást kezelő függvény létrehoz egy új lista objektumot amit paraméterként átad a dispatch
-függvénynek, ami hozzáfűzi a már meglévő listákhoz. 
+függvénynek, ami hozzáfűzi a már meglévő listákhoz.
 
 
 ### A Funkció manuális tesztelésének eredményei
@@ -125,7 +125,7 @@ függvénynek, ami hozzáfűzi a már meglévő listákhoz.
 
 **Tényleges vislkedés:**
 A header cím értéke egy feltételes utasítással kerül megadásra, ha a current változó
-értéke kezdőérték, akkor a "No Todos yet" szöveg jelenik meg, egyébként a jelenlegi lista neve. 
+értéke kezdőérték, akkor a "No Todos yet" szöveg jelenik meg, egyébként a jelenlegi lista neve.
 
 ### A Funkció manuális tesztelésének eredményei
 
@@ -136,3 +136,79 @@ A header cím értéke egy feltételes utasítással kerül megadásra, ha a cur
 |         todos1         |      todos1      |     todos1    |
 |         todos3         |      todos3      |     todos3    |
 
+
+## Számítógép/mobiltelefon megjelenítésnek ugyan azon viselkedésének tesztelése
+
+### Az alkalmazás számítógépen/telefonon való megjelenítése
+
+**Elvárt viselkedés:** Az alkalmazás számítógépen illetve telefonon ugyan azon
+megjelenítése.
+
+**Tényleges viselkedés:** Mobiltelefonon az alkalmazás jobb oldaláról leszakad
+az "Add" gomb, kicsinyítésnél láthatóvá válik.
+
+### Listák hozzáadása telefonos megjelenítésben.
+
+**Elvárt viselkedés:** Az alkalmazás mobil nézetből ugyanúgy képes listákat
+létrehozni/menteni, mint számítógépes megjelenítésből.
+
+**Tényleges viselkedés:** A listák létrehozása nem okoz gondot mobilos nézetben.
+
+### Checkboxok/textmezők szétcsúszása mobilos megjelenítésben.
+
+**Elvárt viselkedés:** Mobiltelefonos nézetben nem csúsztak el a "textmezők"
+illetve "checkboxok" sem.
+
+**Tényleges viselkedés:** Megfelelően működött a megjelenítés, a checkboxok/textmezők
+között nem volt szétcsúszás.
+
+### Képernyőtervhez való igazodás mobil megjelenítésben.
+
+**Elvárt viselkedés:** Az alkalmazás megfelel a képernyőtervnek mobilnézetben.
+
+**Tényleges viselkedés:** Az alkalmazás mobil nézetből hű a képernyőtervhez.
+
+### Kuka gomb megjelenítése mobil nézetből.
+
+**Elvárt viselkedés:** A kuka ikon megfelelőn megjelenítődik.
+
+**Tényleges viselkedés:** Az ikon ugyanúgy megjelenik a kijelzőn mint számítógépen.
+
+### Teljesített elemek kipipálása/majd azok megtartása új elemek hozzáadásánál
+mobil nézetben.
+
+**Elvárt viselkedés:** Teljesítettnek tudunk minősíteni egy feladatot, ha kipipáljuk,
+majd ezek megmaradnak egy új elem felkerülésénél a listára.
+
+**Tényleges viselkedés:** Teljesítetté tudunk nyilvánítani egy feladatot, ha kipipáljuk,
+viszont a pipa eltűnik amikor új elemet adunk hozzá a listánkhoz.
+
+### Betűk illetve ikonok összesűrűsödése/leszakadása telefon nézetben.
+
+**Elvárt viselkedés:** Nem történnek sűrűsödések/leszakadások mobil nézetben.
+
+**Tényleges viselkedés:** A betűk illetve ikonok nem sűrűsödnek, nem szakadnak le
+mobil nézetben.
+
+### Egyes fix elemek elcsúszása
+
+**Elvárt viselkedés:** A fejléc illetve egyes gombok nem csúsznak el mobil
+megjelenítésben.
+
+**Tényleges viselkedés:** A fejléc sáv nem húzódik végig bal oldalról egészen
+a kijelző jobb oldaláig, hanem megszakad.
+
+### Elemek középre való centírozása mobil nézetben.
+
+**Elvárt viselkedés:** Az elemek megfelelő helyükre(középre) kerülnek a megjelenítésben.
+
+**Tényleges viselkedés:** Mobilos nézetben az elemek kilistázásáért felelős elem
+nem középre kerül(balra elcsúszik).
+
+### Lista létrehozása utáni texztmező törlése.
+
+**Elvárt viselkedés:** Számítógépen illetve mobilnézetben is törlődik a lista neve
+miután létrehoztuk azt.
+
+**Tényleges viselkedés:** Tesztelésem során sem számítógépes sem mobil nézetben
+nem törlődött az általam megadott listanév, hanem "textmezőben" maradt benne.
