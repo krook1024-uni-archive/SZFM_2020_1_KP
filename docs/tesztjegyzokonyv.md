@@ -137,11 +137,11 @@ A header cím értéke egy feltételes utasítással kerül megadásra, ha a cur
 |         todos3         |      todos3      |     todos3    |
 
 
-## Számítógép/mobiltelefon megjelenítésnek ugyan azon viselkedésének tesztelése
+## Számítógép/mobiltelefon megjelenítésnek ugyanazon viselkedésének tesztelése
 
 ### Az alkalmazás számítógépen/telefonon való megjelenítése
 
-**Elvárt viselkedés:** Az alkalmazás számítógépen illetve telefonon ugyan azon
+**Elvárt viselkedés:** Az alkalmazás számítógépen illetve telefonon ugyanazon
 megjelenítése.
 
 **Tényleges viselkedés:** Mobiltelefonon az alkalmazás jobb oldaláról leszakad
@@ -205,7 +205,7 @@ a kijelző jobb oldaláig, hanem megszakad.
 **Tényleges viselkedés:** Mobilos nézetben az elemek kilistázásáért felelős elem
 nem középre kerül(balra elcsúszik).
 
-### Lista létrehozása utáni texztmező törlése.
+### Lista létrehozása utáni textmező törlése.
 
 **Elvárt viselkedés:** Számítógépen illetve mobilnézetben is törlődik a lista neve
 miután létrehoztuk azt.
