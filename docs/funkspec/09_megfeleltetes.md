@@ -1,9 +1,9 @@
 # Megfeleltetés: a követelményspecifikáció és használati esetek megfeleltetése
 
-- [x] A felhasználó új feladatokat vihet fel, melyet a rendszer kilistáz számára.
-- [x] A felhasználó meglévő feladatokat jelölhet meg elkészültként.
+- [IGEN] A felhasználó új feladatokat vihet fel, melyet a rendszer kilistáz számára.
+- [IGEN] A felhasználó meglévő feladatokat jelölhet meg elkészültként.
 
 ## Jelölések
 
-- [x]: El kell, hogy készüljön.
-- [ ]: Nem kell, hogy elkészüljön a release napján.
+- [IGEN]: El kell, hogy készüljön.
+- [NEM]: Nem kell, hogy elkészüljön a release napján.

@@ -43,7 +43,7 @@ export default function TodoAdd() {
         type="text"
         placeholder="What to do"
       ></input>
-      <button id="formButton" onClick={handleAdding}>
+      <button data-testid="button" id="formButton" onClick={handleAdding}>
         Add
       </button>
     </form>
